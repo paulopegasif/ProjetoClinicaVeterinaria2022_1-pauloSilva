@@ -17,7 +17,7 @@ public class Controle {
     private JPanelAutenticacao pnlAutenticacao;
     private JMenuBarHome menuBar;
     private JPanelWelcome pnlHome;
-    //private JPanelCliente painelCliente;
+    private JPanelCliente painelCliente; //criando instancia do painel cliente
 
 
     public Controle(){
@@ -36,11 +36,11 @@ public class Controle {
 
         pnlHome = new JPanelWelcome(this);
 
-        //painelCliente = new JPanelCliente(this);
+        painelCliente = new JPanelCliente(this); //inicializando painel cliente
 
         frame.addTela(pnlAutenticacao, "tela_autenticacao");
         frame.addTela(pnlHome,"tela_home");
-        //frame.addTela(painelCliente,"tela_cliente");
+        frame.addTela(painelCliente,"tela_cliente"); //adicionando a tela cliente
 
         frame.showTela("tela_autenticacao");
 
@@ -66,6 +66,12 @@ public class Controle {
         conexaoJDBC = new PersistenciaJDBC();
         System.out.println("Fechando conexão com o BD");
         conexaoJDBC.fecharConexao();
+    }
+
+
+    public void showTela(String nomeTela){
+
+        frame.showTela(nomeTela);
     }
 
 
@@ -99,9 +105,5 @@ public class Controle {
 
             JOptionPane.showMessageDialog(pnlAutenticacao, "Erro ao executar a autenticação no Banco de Dados!", "Autenticacao", JOptionPane.ERROR_MESSAGE);
         }
-    }
-
-    public void showTela(String nomeTela){
-        frame.showTela(nomeTela);
     }
 }

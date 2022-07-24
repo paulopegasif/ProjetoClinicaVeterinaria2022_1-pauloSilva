@@ -20,5 +20,10 @@ public class JPanelEdicao extends JPanel {
         this.painelCliente = painelCliente;
         this.controle = controle;
 
+        initComponents();
+    }
+
+    private void initComponents(){
+
     }
 }

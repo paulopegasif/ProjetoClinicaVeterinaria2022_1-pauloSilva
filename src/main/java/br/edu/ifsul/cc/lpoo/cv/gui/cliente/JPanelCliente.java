@@ -32,11 +32,11 @@ public class JPanelCliente extends JPanel {
         telaEdicao = new JPanelEdicao(this, controle);
 
 
-        this.add(telaListagem, "tela_listagem");
-        this.add(telaEdicao, "tela_edicao");
+        this.add(telaListagem, "tela_listagem"); //adicionando tela
+        this.add(telaEdicao, "tela_edicao"); //adicionando tela
 
 
-        cardLayout.show(this,"telalistagem");
+        cardLayout.show(this,"tela_listagem"); //tela apresentada por padrao
 
 
 

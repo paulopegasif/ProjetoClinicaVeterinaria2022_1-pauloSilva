@@ -30,6 +30,7 @@ public class JPanelListagem extends JPanel {
 
 
 
+        createUIComponents();
         createTable();
     }
 

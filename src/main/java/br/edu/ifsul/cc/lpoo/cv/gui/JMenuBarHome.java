@@ -60,13 +60,12 @@ public class JMenuBarHome extends JMenuBar implements ActionListener {
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
-
             }
 
         }else if(e.getActionCommand().equals(menuItemCliente.getActionCommand())){
             //se clicar no menu item Cliente
 
-            //controle.showTela("tela_cliente");
+            controle.showTela("tela_cliente"); //fazendo exibicao da tela cliente
 
 
 
